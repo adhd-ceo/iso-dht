@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "iso-dht",
+  "version": "1.0.0",
+  "description": "An isolated `@hyperswarm/dht` bootstrap node and persistent peer for your private dht",
+  "main": "index.js",
+  "bin": {
+    "iso-dht": "./bin.js"
+  },
+  "author": "utanapishtim",
+  "license": "MIT",
+  "dependencies": {
+    "@hyperswarm/dht": "^6.3.5",
+    "minimist": "^1.2.7",
+    "ready-resource": "^1.0.0"
+  }
+}
