@@ -23,7 +23,7 @@ console.log(idosht.nodes) // []
 
 # API
 
-## `const isodht = new IsoDHT(host, [options])`
+### `const isodht = new IsoDHT(host, [options])`
 
 `host` should be the permanent ip address of the bootstrap node`
 
@@ -38,15 +38,15 @@ Options includes:
 }
 ```
 
-## `isodht.ready()`
+### `isodht.ready()`
 
-## `isodht.close([options])`
+### `isodht.close([options])`
 
 Options are passed through to `@hyperswarm/dht`'s' `await dht.destroy([options])` method
 
-## `[{ host: String, port: Number }] = isodht.bootstrap`
+### `[{ host: String, port: Number }] = isodht.bootstrap`
 
-## `[DHT] = isodht.nodes`
+### `[DHT] = isodht.nodes`
 
 # CLI
 
