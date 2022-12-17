@@ -38,15 +38,15 @@ Options includes:
 }
 ```
 
-### `isodht.ready()`
+### `await isodht.ready()`
 
-### `isodht.close([options])`
+### `await isodht.close([options])`
 
 Options are passed through to `@hyperswarm/dht`'s' `await dht.destroy([options])` method
 
-### `[{ host: String, port: Number }] = isodht.bootstrap`
+### `const [{ host: String, port: Number }] = isodht.bootstrap`
 
-### `[DHT] = isodht.nodes`
+### `const [bootDHTNode, peerDHTNode] = isodht.nodes`
 
 # CLI
 
