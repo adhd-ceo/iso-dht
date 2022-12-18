@@ -22,9 +22,11 @@ class IsoDHT extends ReadyResource {
     const boot = DHT.bootstrapper(ports.boot, host)
     await boot.ready()
     bootstrap.push({ host, port: boot.address().port })
-    const peer = new DHT({ bootstrap, ephemeral: false })
+    nodes.push(boot)
+    const peer = new DHT({ bootstrap, ephemeral: false, port: ports.peer })
     await peer.ready()
-    nodes.push(boot, peer)
+    bootstrap.push({ host, port: peer.address().port })
+    nodes.push(peer)
   }
 
   async _close (opts = {}) {
